@@ -175,7 +175,7 @@ export default function ProductDetail({
                       Enquiry Now
                     </Button>
                   </Link>
-                  <Button variant="outline" className="h-16 w-full sm:w-16 rounded-none border-zinc-300 dark:border-zinc-700 text-black dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800">
+                  <Button variant="outline" className="h-16 w-full sm:w-16 rounded-none border-zinc-300 dark:border-zinc-700 text-black dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 bg-white">
                     <Share2 size={24} />
                   </Button>
                </div>
