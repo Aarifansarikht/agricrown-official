@@ -1,0 +1,123 @@
+
+"use client"
+
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+
+const slides = [
+  {
+    id: 1,
+    image: "/images/hero/banner1.jpg",
+    title: "PLOUGH DEEP.\nHARVEST GOLD.\nLIVE AGRI.",
+    subtitle: "High-performance rotary tillers built for those who push the earth to its limits."
+  },
+  {
+    id: 2,
+    image: "/images/hero/banner2.jpg",
+
+    title: "UNLEASH\nTHE POWER\nOF PRECISION.",
+    subtitle: "Engineered for durability. Designed for the toughest soil conditions on the planet."
+  },
+  {
+    id: 3,
+        image: "/images/hero/banner3.jpg",
+
+    title: "DOMINATE\nYOUR FIELD\nEVERY SEASON.",
+    subtitle: "Join the elite circle of farmers using Agricrown technology."
+  }
+];
+
+const Hero = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <section className="relative h-screen w-full bg-black overflow-hidden flex items-center justify-center">
+      
+      {/* Background Slides */}
+      <AnimatePresence mode="wait">
+        <motion.div 
+          key={current}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="absolute inset-0 z-0"
+        >
+          {/* Reduced overlay opacity so image is more visible */}
+          <div className="absolute inset-0 bg-black/40 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30 z-10" />
+          <Image 
+            src={slides[current].image} 
+            alt="Hero Background"
+            fill
+            className="object-cover animate-pulse-slow"
+            priority={true}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      <div className="container mx-auto px-4 relative z-20 text-center pt-20">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`text-${current}`}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-5xl mx-auto"
+          >
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold text-white uppercase italic leading-[0.85] tracking-tighter mb-8 drop-shadow-2xl whitespace-pre-line">
+              {slides[current].title.split('\n').map((line, i) => (
+                <span key={i} className={i === 1 ? "text-primary" : "text-white"}>
+                  {line}<br/>
+                </span>
+              ))}
+            </h1>
+            
+            <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 font-medium leading-relaxed drop-shadow-md">
+              {slides[current].subtitle}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/products">
+                <Button size="lg" className="min-w-[200px] bg-primary text-black hover:bg-white border-none">
+                  VIEW MACHINERY
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button size="lg" variant="outline" className="min-w-[200px]">
+                  ENQUIRY NOW
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Slide Indicators - Middle Bottom */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+        {slides.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrent(idx)}
+            className={`h-1.5 transition-all duration-300 rounded-full ${
+              current === idx ? 'w-12 bg-primary' : 'w-12 bg-white/30 hover:bg-white/50'
+            }`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
