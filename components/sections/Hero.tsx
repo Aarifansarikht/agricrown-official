@@ -41,7 +41,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-screen w-full bg-black overflow-hidden flex items-center justify-center">
+    <section className="relative h-[100dvh] w-full bg-black overflow-hidden flex items-center justify-center">
       
       {/* Background Slides */}
       <AnimatePresence mode="wait">
@@ -50,7 +50,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           className="absolute inset-0 z-0"
         >
           {/* Reduced overlay opacity so image is more visible */}
@@ -66,7 +66,7 @@ const Hero = () => {
         </motion.div>
       </AnimatePresence>
 
-      <div className="container mx-auto px-4 relative z-20 text-center pt-20">
+      <div className="container mx-auto px-4 relative z-20 text-center pt-12 md:pt-20">
         <AnimatePresence mode="wait">
           <motion.div
             key={`text-${current}`}
@@ -76,7 +76,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold text-white uppercase italic leading-[0.85] tracking-tighter mb-8 drop-shadow-2xl whitespace-pre-line">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-heading font-bold text-white uppercase italic leading-[0.9] md:leading-[0.85] tracking-tighter mb-4 md:mb-8 drop-shadow-2xl whitespace-pre-line">
               {slides[current].title.split('\n').map((line, i) => (
                 <span key={i} className={i === 1 ? "text-primary" : "text-white"}>
                   {line}<br/>
@@ -84,18 +84,18 @@ const Hero = () => {
               ))}
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 font-medium leading-relaxed drop-shadow-md">
+            <p className="text-sm sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8 md:mb-10 font-medium leading-relaxed drop-shadow-md px-4">
               {slides[current].subtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/products">
-                <Button size="lg" className="min-w-[200px] bg-primary text-black hover:bg-white border-none">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
+              <Link href="/products" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto sm:min-w-[200px] bg-primary text-black hover:bg-white border-none h-12 md:h-14 text-sm md:text-base">
                   VIEW MACHINERY
                 </Button>
               </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="min-w-[200px]">
+              <Link href="/contact" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto sm:min-w-[200px] h-12 md:h-14 text-sm md:text-base">
                   ENQUIRY NOW
                 </Button>
               </Link>
@@ -105,13 +105,13 @@ const Hero = () => {
       </div>
 
       {/* Slide Indicators - Middle Bottom */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+      <div className="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-2 md:gap-3">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`h-1.5 transition-all duration-300 rounded-full ${
-              current === idx ? 'w-12 bg-primary' : 'w-12 bg-white/30 hover:bg-white/50'
+            className={`h-1 md:h-1.5 transition-all duration-300 rounded-full ${
+              current === idx ? 'w-8 md:w-12 bg-primary' : 'w-8 md:w-12 bg-white/30 hover:bg-white/50'
             }`}
           />
         ))}

@@ -1,3 +1,4 @@
+
 "use client"
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -9,26 +10,26 @@ import { Button } from '@/components/ui/button';
 
 const ProductShowcase = () => {
   return (
-    <section className="bg-zinc-50 dark:bg-black py-24 relative overflow-hidden transition-colors duration-300">
+    <section className="bg-zinc-50 dark:bg-black py-12 md:py-24 relative overflow-hidden transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-8">
-         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+         <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-6">
             <div className="max-w-2xl">
-               <span className="text-primary font-bold tracking-widest uppercase text-xs mb-2 block font-heading italic">Our Machinery</span>
-               <h2 className="text-5xl md:text-6xl font-heading font-bold text-black dark:text-white uppercase italic leading-none">
+               <span className="text-primary font-bold tracking-widest uppercase text-[10px] md:text-xs mb-2 block font-heading italic">Our Machinery</span>
+               <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-black dark:text-white uppercase italic leading-none">
                   Engineered For <span className="text-primary">Dominance</span>
                </h2>
-               <p className="text-zinc-600 dark:text-gray-400 mt-4 text-lg">
+               <p className="text-zinc-600 dark:text-gray-400 mt-2 md:mt-4 text-sm md:text-lg">
                   Explore our flagship series, each built to conquer specific soil challenges.
                </p>
             </div>
             <Link href="/products">
-               <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black">
+               <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black text-xs md:text-sm h-10 md:h-12">
                   View All Products <ArrowRight className="ml-2 w-4 h-4" />
                </Button>
             </Link>
          </div>
 
-         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {products.slice(0, 3).map((product, idx) => (
                <motion.div 
                   key={idx}
@@ -47,36 +48,36 @@ const ProductShowcase = () => {
                         className="object-cover transition-transform duration-700 group-hover:scale-110" 
                      />
                      <div className="absolute top-4 left-4 z-10">
-                        <span className="bg-primary text-white text-xs font-bold px-3 py-1 uppercase tracking-widest shadow-md">
+                        <span className="bg-primary text-white text-[10px] font-bold px-2 py-1 md:px-3 md:py-1 uppercase tracking-widest shadow-md">
                            {product.series}
                         </span>
                      </div>
                   </div>
 
                   {/* Content */}
-                  <div className="p-8 flex flex-col flex-grow">
-                     <div className="flex items-center gap-2 mb-3">
+                  <div className="p-5 md:p-8 flex flex-col flex-grow">
+                     <div className="flex items-center gap-2 mb-2 md:mb-3">
                         <div className="flex text-primary">
-                           <Star size={14} fill="currentColor" />
-                           <Star size={14} fill="currentColor" />
-                           <Star size={14} fill="currentColor" />
-                           <Star size={14} fill="currentColor" />
-                           <Star size={14} fill="currentColor" />
+                           <Star size={12} fill="currentColor" className="md:w-[14px] md:h-[14px]" />
+                           <Star size={12} fill="currentColor" className="md:w-[14px] md:h-[14px]" />
+                           <Star size={12} fill="currentColor" className="md:w-[14px] md:h-[14px]" />
+                           <Star size={12} fill="currentColor" className="md:w-[14px] md:h-[14px]" />
+                           <Star size={12} fill="currentColor" className="md:w-[14px] md:h-[14px]" />
                         </div>
-                        <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Top Rated</span>
+                        <span className="text-[10px] md:text-xs font-bold text-zinc-400 uppercase tracking-wider">Top Rated</span>
                      </div>
 
-                     <h3 className="text-2xl font-heading font-bold text-black dark:text-white uppercase italic leading-none mb-3 group-hover:text-primary transition-colors">
+                     <h3 className="text-xl md:text-2xl font-heading font-bold text-black dark:text-white uppercase italic leading-none mb-2 md:mb-3 group-hover:text-primary transition-colors">
                         {product.name}
                      </h3>
                      
-                     <p className="text-zinc-600 dark:text-gray-400 text-sm mb-6 line-clamp-2 leading-relaxed">
+                     <p className="text-zinc-600 dark:text-gray-400 text-xs md:text-sm mb-4 md:mb-6 line-clamp-2 leading-relaxed">
                         {product.shortDescription}
                      </p>
 
-                     <div className="mt-auto pt-6 border-t border-zinc-100 dark:border-zinc-800">
-                        <Link href={`/products/${product.slug}`} className="inline-flex items-center text-sm font-bold uppercase tracking-widest text-black dark:text-white group-hover:text-primary transition-colors">
-                           View Details <ArrowRight size={16} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
+                     <div className="mt-auto pt-4 md:pt-6 border-t border-zinc-100 dark:border-zinc-800">
+                        <Link href={`/products/${product.slug}`} className="inline-flex items-center text-xs md:text-sm font-bold uppercase tracking-widest text-black dark:text-white group-hover:text-primary transition-colors">
+                           View Details <ArrowRight size={14} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
                         </Link>
                      </div>
                   </div>

@@ -29,15 +29,15 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="bg-white dark:bg-black py-24 relative overflow-hidden border-t border-zinc-200 dark:border-zinc-900 transition-colors duration-300">
+    <section className="bg-white dark:bg-black py-12 md:py-24 relative overflow-hidden border-t border-zinc-200 dark:border-zinc-900 transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <span className="text-primary font-bold tracking-widest uppercase text-xs mb-2 block font-heading italic">Process</span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-black dark:text-white uppercase italic mb-4">How We Work</h2>
-          <p className="text-zinc-600 dark:text-gray-400">Streamlined process from enquiry to delivery.</p>
+        <div className="text-center mb-10 md:mb-16">
+          <span className="text-primary font-bold tracking-widest uppercase text-[10px] md:text-xs mb-2 block font-heading italic">Process</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-black dark:text-white uppercase italic mb-3 md:mb-4">How We Work</h2>
+          <p className="text-zinc-600 dark:text-gray-400 text-sm md:text-base">Streamlined process from enquiry to delivery.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -45,14 +45,14 @@ const HowItWorks = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-900 p-8 relative group hover:border-primary/50 dark:hover:border-primary/50 transition-colors duration-300 shadow-sm hover:shadow-lg"
+              className="bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-900 p-6 md:p-8 relative group hover:border-primary/50 dark:hover:border-primary/50 transition-colors duration-300 shadow-sm hover:shadow-lg mt-4 md:mt-0"
             >
-              <span className="absolute -top-6 left-6 text-6xl font-heading font-bold text-zinc-200 dark:text-zinc-900 group-hover:text-primary/10 transition-colors select-none italic">
+              <span className="absolute -top-5 left-6 text-5xl md:text-6xl font-heading font-bold text-zinc-200 dark:text-zinc-900 group-hover:text-primary/10 transition-colors select-none italic">
                 {step.num}
               </span>
               <div className="relative z-10 pt-4">
-                <h3 className="text-black dark:text-white font-heading font-bold text-xl uppercase italic mb-3">{step.title}</h3>
-                <p className="text-zinc-600 dark:text-gray-500 text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="text-black dark:text-white font-heading font-bold text-lg md:text-xl uppercase italic mb-2 md:mb-3">{step.title}</h3>
+                <p className="text-zinc-600 dark:text-gray-500 text-xs md:text-sm leading-relaxed">{step.desc}</p>
               </div>
             </motion.div>
           ))}
