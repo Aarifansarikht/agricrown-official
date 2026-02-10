@@ -26,7 +26,7 @@ const translations = {
     "hero.slide2.title": "UNLEASH\nTHE POWER\nOF PRECISION.",
     "hero.slide2.subtitle": "Engineered for durability. Designed for the toughest soil conditions on the planet.",
     "hero.slide3.title": "DOMINATE\nYOUR FIELD\nEVERY SEASON.",
-    "hero.slide3.subtitle": "Join the elite circle of farmers using Agricrown technology.",
+    "hero.slide3.subtitle": "When farmers succeed, strong brands are built.",
     "hero.cta.view": "VIEW MACHINERY",
     "hero.cta.enquiry": "ENQUIRY NOW",
 

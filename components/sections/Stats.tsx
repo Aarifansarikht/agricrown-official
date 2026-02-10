@@ -5,10 +5,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const stats = [
-  { value: "500+", label: "Dealers Worldwide" },
+  { value: "50+", label: "Products" },
   { value: "50k", label: "Happy Farmers" },
-  { value: "100%", label: "Durable Tech" },
-  { value: "24/7", label: "Expert Support" }
+  { value: "99%", label: "Durable" },
+  { value: "12/7", label: "Expert Support" }
 ];
 
 const Stats = () => {
@@ -20,14 +20,14 @@ const Stats = () => {
            <div className="lg:w-3/5">
               <span className="text-primary font-bold tracking-widest uppercase text-[10px] md:text-xs mb-2 md:mb-4 block font-heading italic">Our Philosophy</span>
               <h2 className="text-3xl md:text-5xl lg:text-7xl font-heading font-bold uppercase italic leading-[0.9]">
-                 <span className="text-zinc-300 dark:text-zinc-800 block mb-1 md:mb-2">We Don't Just Sell.</span>
-                 <span className="text-black dark:text-white block">We Partner. We Innovate.</span>
-                 <span className="text-primary block">We Conquer.</span>
+                 <span className="text-zinc-300 dark:text-zinc-800 block mb-1 md:mb-2">When farmers </span>
+                 <span className="text-black dark:text-white block">trust the brand</span>
+                 <span className="text-primary block">delears grow faster.</span>
               </h2>
            </div>
            <div className="lg:w-2/5 pb-2">
               <p className="text-sm md:text-lg text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed">
-                 Agricrown technology isn't just about turning soil; it's about transforming your yield. We build machines that withstand the toughest conditions so you can dominate every harvest season.
+                At Agricrown, trust is the foundation of growth. When farmers believe in the brand, dealers gain confidence, partnerships strengthen, and businesses scale faster. We focus on reliability, performance, and long-term value—so every link in the chain grows together.
               </p>
            </div>
         </div>

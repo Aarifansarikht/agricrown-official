@@ -25,7 +25,7 @@ const CTA = () => {
             </h2>
             <p className="text-base md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12 font-light leading-relaxed">
                 Equip your farm with the industry's most durable rotary tillers. 
-                Experience the difference of premium engineering and 24/7 support.
+                Experience the difference of premium engineering and 12/7 support.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
                 <Link href="/contact" className="w-full sm:w-auto">

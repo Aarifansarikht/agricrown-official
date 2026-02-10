@@ -18,10 +18,6 @@ const faqs = [
     a: "Standard safety gear is recommended. We provide a comprehensive safety kit with every machine purchase."
   },
   {
-    q: "Can I pause my membership?",
-    a: "Yes, distributor memberships can be paused seasonally during non-harvest months."
-  },
-  {
     q: "How do I order spare parts?",
     a: "Spare parts can be ordered directly through our website or via your local authorized Agricrown dealer."
   }

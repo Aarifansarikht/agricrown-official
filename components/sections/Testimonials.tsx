@@ -10,20 +10,20 @@ import Image from 'next/image';
 const reviews = [
   {
     text: "I went from barely managing my harvest to doubling my yield in one season. The Titanium Series isn't just a machine; it's a game changer.",
-    author: "Mike Chen",
-    role: "Commercial Farmer",
+    author: "Abhay Singh",
+    role: "Agricultural Dealer",
     img: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
     text: "The durability of the Alfha series is unmatched. We run these tillers 12 hours a day in rocky soil, and they just keep going.",
-    author: "Sarah Johnson",
-    role: "Vineyard Manager",
+    author: "Mohan",
+    role: "Agricultural Dealer",
     img: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
     text: "Agricrown's support team helped us customize the transmission for our specific clay soil type. The results have been phenomenal.",
-    author: "David O'Connor",
-    role: "Agricultural Contractor",
+    author: "Sanjay Sharma",
+    role: "Agricultural Dealer",
     img: "https://randomuser.me/api/portraits/men/85.jpg"
   }
 ];

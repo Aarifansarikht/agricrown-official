@@ -22,8 +22,9 @@ const steps = [
   },
   {
     num: "04",
-    title: "Delivery",
-    desc: "Secure packaging and global shipping to your nearest dealer or farm location."
+    title: "Delear ship Delivery",
+    desc: "Ensuring fast, secure deliveries that keep dealer operations running smoothly."
+
   }
 ];
 

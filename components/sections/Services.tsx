@@ -8,8 +8,9 @@ import { Truck, Wrench, ShieldCheck, Headphones, Settings, Leaf } from 'lucide-r
 const services = [
   {
     icon: Truck,
-    title: "Global Shipping",
-    description: "Reliable logistics partners ensuring your machinery arrives safely, anywhere in the world."
+    title: "Dealer Shipping",
+    description: "Fast, secure shipping designed to support dealers with timely and dependable deliveries."
+
   },
   {
     icon: ShieldCheck,
@@ -33,7 +34,7 @@ const services = [
   },
   {
     icon: Headphones,
-    title: "24/7 Support",
+    title: "12/7 Support",
     description: "Round-the-clock technical assistance for dealers and farmers alike."
   }
 ];

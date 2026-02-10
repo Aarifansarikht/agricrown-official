@@ -26,13 +26,13 @@ const AboutSection = () => {
                  src="/images/experiance.jpg" 
                  alt="Factory Floor" 
                  fill
-                 className="object-cover relative z-10 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-700"
+                 className="object-cover relative z-10 opacity-80 hover:opacity-100  transition-all duration-700"
                />
                
                {/* Overlay Box */}
                <div className="absolute -bottom-5 -right-5 md:-bottom-10 md:-right-10 w-48 h-48 md:w-64 md:h-64 bg-white dark:bg-black z-20 p-4 md:p-8 flex flex-col justify-center items-center text-center hidden sm:flex border border-zinc-200 dark:border-zinc-800 shadow-xl">
                  <div className="w-full h-full border border-zinc-200 dark:border-zinc-800 flex flex-col items-center justify-center p-4">
-                   <span className="text-4xl md:text-6xl font-heading font-bold text-primary italic mb-2">25+</span>
+                   <span className="text-4xl md:text-6xl font-heading font-bold text-primary italic mb-2">24+</span>
                    <span className="text-black dark:text-white text-[10px] md:text-sm uppercase font-bold tracking-widest leading-tight italic">Years of<br/>Excellence</span>
                  </div>
                </div>
@@ -50,7 +50,7 @@ const AboutSection = () => {
               <span className="text-primary font-bold tracking-widest uppercase text-[10px] md:text-xs mb-2 block font-heading italic">About Agricrown</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-black dark:text-white uppercase italic mb-4 md:mb-6 leading-tight">
                 Empowering Farmers <br/>
-                <span className="text-zinc-400 dark:text-zinc-600">Since 1999</span>
+                <span className="text-zinc-400 dark:text-zinc-600">Since 2002</span>
               </h2>
               <p className="text-zinc-600 dark:text-gray-400 text-sm md:text-lg mb-6 md:mb-8 leading-relaxed border-l-4 border-primary pl-4 md:pl-6">
                 Agricrown is a leading manufacturer of high-quality agricultural machinery. We combine traditional farming wisdom with modern engineering to create rotary tillers that stand the test of time.
@@ -59,7 +59,7 @@ const AboutSection = () => {
               <div className="grid grid-cols-1 gap-3 md:gap-4 mb-6 md:mb-8">
                 {[
                   "Advanced manufacturing facility in India",
-                  "Exporting to over 15 countries worldwide",
+                 
                   "ISO 9001:2015 Certified Production"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 md:gap-4 group">

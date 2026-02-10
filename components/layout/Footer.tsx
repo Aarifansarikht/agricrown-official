@@ -59,7 +59,7 @@ const Footer = () => {
               <li><Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">Contact Support</Link></li>
               <li><Link href="/news" className="text-gray-400 hover:text-white text-sm transition-colors">Latest News</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Warranty & Service</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Distributor Login</Link></li>
+
             </ul>
           </div>
 
@@ -69,22 +69,23 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400 text-sm">
                 <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
-                <span>123 Industrial Area, Phase 2, New Delhi, India 110020</span>
+                <span>Budhana-Khatauli Rd, Khatauli, Uttar Pradesh 251201</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <Phone size={18} className="text-primary shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>+91 094126 38415</span>
+                <span>+91 975659 6361</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <Mail size={18} className="text-primary shrink-0" />
-                <span>sales@agricrown.com</span>
+                <span>sales@agricrownpro.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-500">© 2024 Agricrown Machinery. All rights reserved.</p>
+          <p className="text-xs text-gray-500">© 2026 Agricrown Machinery. All rights reserved.</p>
           <div className="flex items-center gap-6 text-xs text-gray-500">
             <Link href="#" className="hover:text-white">Privacy Policy</Link>
             <Link href="#" className="hover:text-white">Terms of Service</Link>

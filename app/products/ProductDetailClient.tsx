@@ -165,7 +165,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
               </div>
 
               {/* Distributorship Banner */}
-              <div className="bg-zinc-900 dark:bg-zinc-800 border-l-4 border-primary p-4 md:p-6 mb-6 md:mb-8">
+              {/* <div className="bg-zinc-900 dark:bg-zinc-800 border-l-4 border-primary p-4 md:p-6 mb-6 md:mb-8">
                 <p className="text-zinc-400 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1">
                   Estimated Retail Price
                 </p>
@@ -175,7 +175,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
                 <p className="text-zinc-500 text-[9px] md:text-[10px] mt-2">
                   *Prices vary by region and configuration. Contact for exact quote.
                 </p>
-              </div>
+              </div> */}
 
               {/* Action Buttons */}
               <div className="flex flex-row gap-3 md:gap-4 sticky bottom-4 lg:static z-20">
