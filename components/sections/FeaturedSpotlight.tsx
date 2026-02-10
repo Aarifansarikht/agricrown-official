@@ -44,7 +44,7 @@ const FeaturedSpotlight = () => {
               <div className="relative group cursor-crosshair">
                  <div className="relative aspect-[4/3]">
                     <Image 
-                              src="/images/products/pro1.jpg"  
+                      src="/images/products/pro1.jpg"  
                       alt="Titanium Plus Tiller" 
                       fill
                       className="object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all duration-700"

@@ -86,14 +86,6 @@ const Header = () => {
                     />
                   </Link>
                 ))}
-              <button
-                onClick={toggleLanguage}
-                className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white hover:text-primary transition-colors"
-              >
-                <Globe size={16} />
-                <span>{language === "en" ? "EN" : "HI"}</span>
-              </button>
-              {/* THEME TOGGLE */}
               {mounted && (
                 <button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -106,13 +98,21 @@ const Header = () => {
                   )}
                 </button>
               )}
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white hover:text-primary transition-colors"
+              >
+                <Globe size={20} />
+                <span>{language === "en" ? "EN" : "HI"}</span>
+              </button>
+              {/* THEME TOGGLE */}
 
               <Link href="/contact">
                 <Button
                   size="sm"
                   className="bg-primary text-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-bold italic px-6"
                 >
-                   {t('nav.enquiry')}
+                  {t("nav.enquiry")}
                 </Button>
               </Link>
             </nav>
@@ -121,9 +121,9 @@ const Header = () => {
             <div className="flex items-center gap-3 lg:hidden">
               <button
                 onClick={toggleLanguage}
-                className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-black dark:text-white hover:text-primary transition-colors"
+                className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white hover:text-primary transition-colors"
               >
-                <Globe size={16} />
+                <Globe size={20} />
                 <span>{language === "en" ? "EN" : "HI"}</span>
               </button>
               {mounted && (
