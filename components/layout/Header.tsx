@@ -3,13 +3,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Globe } from "lucide-react";
 import { navLinks } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useLanguage } from "@/lib/language";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ const Header = () => {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   /* Mount + Scroll detection */
   useEffect(() => {
@@ -33,21 +35,18 @@ const Header = () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
-
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "hi" : "en");
+  };
   return (
     <>
       {/* HEADER */}
       <header
-  className={cn(
-    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-20 backdrop-blur-md",
-    pathname === "/"
-      ? scrolled
-        ? "bg-black/90 shadow-sm"
-        : "bg-transparent"
-      : "bg-black shadow-sm",
-  )}
->
-
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-20 backdrop-blur-md",
+          pathname === "/" ? (scrolled ? "bg-black/90 shadow-sm" : "bg-transparent") : "bg-black shadow-sm",
+        )}
+      >
         <div className="container mx-auto h-full px-4 lg:px-8">
           <div className="flex h-full items-center justify-between">
             {/* LOGO */}
@@ -87,7 +86,13 @@ const Header = () => {
                     />
                   </Link>
                 ))}
-
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white hover:text-primary transition-colors"
+              >
+                <Globe size={16} />
+                <span>{language === "en" ? "EN" : "HI"}</span>
+              </button>
               {/* THEME TOGGLE */}
               {mounted && (
                 <button
@@ -107,13 +112,20 @@ const Header = () => {
                   size="sm"
                   className="bg-primary text-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-bold italic px-6"
                 >
-                  ENQUIRY NOW
+                   {t('nav.enquiry')}
                 </Button>
               </Link>
             </nav>
 
             {/* MOBILE ACTIONS */}
             <div className="flex items-center gap-3 lg:hidden">
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-black dark:text-white hover:text-primary transition-colors"
+              >
+                <Globe size={16} />
+                <span>{language === "en" ? "EN" : "HI"}</span>
+              </button>
               {mounted && (
                 <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="p-2">
                   {theme === "dark" ? (
@@ -124,8 +136,8 @@ const Header = () => {
                 </button>
               )}
 
-              <button onClick={() => setIsOpen((prev) => !prev)} >
-                {isOpen ? <X size={30} className="dark:text-white " /> : <Menu size={30}  className="text-white "/>}
+              <button onClick={() => setIsOpen((prev) => !prev)}>
+                {isOpen ? <X size={30} className="dark:text-white " /> : <Menu size={30} className="text-white " />}
               </button>
             </div>
           </div>

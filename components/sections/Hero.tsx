@@ -6,40 +6,41 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/lib/language';
 
-const slides = [
-  {
-    id: 1,
-    image: "/images/hero/banner1.jpg",
-    title: "PLOUGH DEEP.\nHARVEST GOLD.\nLIVE AGRI.",
-    subtitle: "High-performance rotary tillers built for those who push the earth to its limits."
-  },
-  {
-    id: 2,
-    image: "/images/hero/banner2.jpg",
 
-    title: "UNLEASH\nTHE POWER\nOF PRECISION.",
-    subtitle: "Engineered for durability. Designed for the toughest soil conditions on the planet."
-  },
-  {
-    id: 3,
-        image: "/images/hero/banner3.jpg",
-
-    title: "DOMINATE\nYOUR FIELD\nEVERY SEASON.",
-    subtitle: "Join the elite circle of farmers using Agricrown technology."
-  }
-];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
-
+ const { t } = useLanguage();
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+const slides = [
+  {
+    id: 1,
+    image: "/images/hero/banner1.jpg",
+      title: t("hero.slide1.title"),
+      subtitle: t("hero.slide1.subtitle")
+  },
+  {
+    id: 2,
+    image: "/images/hero/banner2.jpg",
 
+       title: t("hero.slide2.title"),
+      subtitle: t("hero.slide2.subtitle")
+  },
+  {
+    id: 3,
+        image: "/images/hero/banner3.jpg",
+
+     title: t("hero.slide3.title"),
+      subtitle: t("hero.slide3.subtitle")
+  }
+];
   return (
     <section className="relative h-[100dvh] w-full bg-black overflow-hidden flex items-center justify-center">
       
@@ -66,7 +67,7 @@ const Hero = () => {
         </motion.div>
       </AnimatePresence>
 
-      <div className="container mx-auto px-4 relative z-20 text-center pt-12 md:pt-20">
+      <div className="container mx-auto px-4 relative z-20 text-center pt-12 md:pt-20 ">
         <AnimatePresence mode="wait">
           <motion.div
             key={`text-${current}`}
@@ -91,12 +92,12 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
               <Link href="/products" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full sm:w-auto sm:min-w-[200px] bg-primary text-black hover:bg-white border-none h-12 md:h-14 text-sm md:text-base">
-                  VIEW MACHINERY
+                   {t('hero.cta.view')}
                 </Button>
               </Link>
               <Link href="/contact" className="w-full sm:w-auto">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto sm:min-w-[200px] h-12 md:h-14 text-sm md:text-base">
-                  ENQUIRY NOW
+                      {t('hero.cta.enquiry')}
                 </Button>
               </Link>
             </div>
