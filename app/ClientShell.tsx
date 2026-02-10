@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/lib/language";
 import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 
 
 export default function ClientShell({
@@ -15,7 +16,7 @@ export default function ClientShell({
     <LanguageProvider>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <div className="flex flex-col min-h-screen">
-          {/* <Header /> */}
+          <Header />
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>
