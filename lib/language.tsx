@@ -178,8 +178,15 @@ export const LanguageProvider = ({ children }: { children?: ReactNode }) => {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
+
+  // During SSR / prerender, context can be undefined
   if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    return {
+      language: "en" as Language,
+      setLanguage: () => {},
+      t: (key: string) => key,
+    };
   }
+
   return context;
 };

@@ -19,28 +19,27 @@ const Hero = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
-const slides = [
+
+const slides = React.useMemo(() => [
   {
     id: 1,
     image: "/images/hero/banner1.jpg",
-      title: t("hero.slide1.title"),
-      subtitle: t("hero.slide1.subtitle")
+    title: t("hero.slide1.title"),
+    subtitle: t("hero.slide1.subtitle"),
   },
   {
     id: 2,
     image: "/images/hero/banner2.jpg",
-
-       title: t("hero.slide2.title"),
-      subtitle: t("hero.slide2.subtitle")
+    title: t("hero.slide2.title"),
+    subtitle: t("hero.slide2.subtitle"),
   },
   {
     id: 3,
-        image: "/images/hero/banner3.jpg",
-
-     title: t("hero.slide3.title"),
-      subtitle: t("hero.slide3.subtitle")
-  }
-];
+    image: "/images/hero/banner3.jpg",
+    title: t("hero.slide3.title"),
+    subtitle: t("hero.slide3.subtitle"),
+  },
+], [t]);
   return (
     <section className="relative h-[100dvh] w-full bg-black overflow-hidden flex items-center justify-center">
       
