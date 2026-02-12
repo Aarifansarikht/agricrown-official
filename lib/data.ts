@@ -54,7 +54,7 @@ export const products: Product[] = [
     series: "Titanium Plus",
     description: "The Titanium Plus Series is the pinnacle of Agricrown engineering. Designed for heavy-duty performance in the toughest soil conditions, it features a robust multi-speed gearbox and reinforced frame structure.",
     shortDescription: "Heavy-duty multi-speed tiller for tough soil.",
-    image: "/images/products/rotary-tiller-for-farming.webp", 
+    image: "/images/products/product-agri.jpeg", 
     gallery: [
       "https://images.unsplash.com/photo-1625246333195-58197bd4773d?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1530267981375-f0de937f5f13?q=80&w=1000&auto=format&fit=crop",
@@ -87,7 +87,7 @@ export const products: Product[] = [
     series: "Titanium",
     description: "A versatile rotary tiller balancing power and efficiency. The Titanium Series is perfect for medium to large farms, offering reliable gear drive transmission and durable blade options.",
     shortDescription: "Versatile performance for medium to large farms.",
-    image: "/images/products/tractor-blade.jpg",
+    image: "/images/products/agri-ti.jpeg",
     gallery: [
       "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1000&auto=format&fit=crop"
@@ -119,7 +119,7 @@ export const products: Product[] = [
     series: "Alfha",
     description: "The Alfha Series brings advanced transmission technology to everyday farming. With a focus on fine tillage and seedbed preparation, it's the smart choice for precision agriculture.",
     shortDescription: "Advanced transmission for precision tillage.",
-    image: "/images/products/Rotary-Tiller.jpg",
+    image: "/images/products/product-agri.-alpha.jpeg",
     gallery: [
       "https://images.unsplash.com/photo-1517427677506-ade074eb1432?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1628005374467-37d45293237a?q=80&w=1000&auto=format&fit=crop"
